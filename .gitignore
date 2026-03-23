@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Data files
+data/raw/
+data/interim/
+data/processed/
+
+# Reports and figures
+reports/figures/
+reports/final_report/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+
+# ML artifacts
+mlruns/
+*.pkl
+*.joblib
+*.onnx
