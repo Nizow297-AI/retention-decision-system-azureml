@@ -1,47 +1,71 @@
 # Retention Decision System
 
 ## Overview
-This project builds an end-to-end retention decision system using machine learning and A/B testing.
+This project builds an end-to-end retention decision system that combines machine learning and experimentation to improve customer retention.
 
 The system:
-- predicts customer churn
+- predicts customer churn risk
 - identifies high-risk customers
 - recommends the most effective retention strategy
 
 ## Problem
-Customer churn leads to revenue loss. Businesses need to:
-1. identify at-risk customers
-2. determine which intervention works best
+Customer churn leads to revenue loss and increased acquisition costs. Businesses need to:
+1. identify customers at risk of leaving
+2. determine which intervention is most effective
 
-## Approach
-1. Churn prediction using Random Forest
-2. Feature engineering to improve signal
-3. A/B testing to compare strategies
-4. Decision system to combine both
+## Solution
+This project combines:
+
+### 1. Churn Prediction
+- Model: Random Forest
+- Predicts probability of churn
+- Identifies high-risk customers
+
+### 2. A/B Testing
+- Compares two strategies (A vs B)
+- Uses conversion as a proxy for engagement
+- Determines statistically significant best strategy
+
+### 3. Decision System
+- Segments customers into risk levels
+- Recommends targeted retention strategy
 
 ## Results
-- Churn model ROC-AUC: ~0.78+
-- Recall improved significantly through model tuning
+- ROC-AUC: ~0.78+
+- Recall significantly improved through tuning
 - Strategy A showed higher conversion with statistical significance
 
 ## Business Value
-- Enables targeted retention
-- Improves decision-making
-- Reduces unnecessary intervention cost
+- Enables targeted retention strategies
+- Improves customer engagement
+- Reduces churn-related revenue loss
+- Optimizes marketing interventions
 
 ## Project Structure
-- notebooks/ → analysis
-- src/ → reusable code
-- models/ → trained model
-- data/ → datasets
+
+retention-decision-system/
+├── data/
+├── notebooks/
+├── src/
+├── models/
+├── app/
+├── README.md
+├── requirements.txt
 
 ## How to Run
-1. Install requirements
-2. Run notebooks in order (01 → 07)
-3. Use prediction module in src/
+
+1. Clone the repository
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Run notebooks in order (01 → 07)
+4. Run the Streamlit app:
+   streamlit run app/app.py
 
 ## Key Insight
-This project moves beyond prediction to decision-making by combining machine learning with experimentation.
+This project moves beyond prediction by combining machine learning with experimentation to support data-driven decision-making.
 
-## Limitation
-A/B dataset uses conversion as a proxy for engagement rather than direct churn outcomes.
+## Limitations
+The A/B dataset is not directly linked to churn. Conversion is used as a proxy for engagement, which is assumed to influence retention behavior.
+
+## Author
+Niren Pillay
