@@ -1,29 +1,47 @@
-# Retention Decision System with Azure ML
+# Retention Decision System
 
-## Project Overview
-This project builds an end-to-end retention decision system for a banking use case.
+## Overview
+This project builds an end-to-end retention decision system using machine learning and A/B testing.
 
-It combines:
-1. Customer churn prediction to identify high-risk customers
-2. A/B testing analysis to determine the most effective retention strategy
+The system:
+- predicts customer churn
+- identifies high-risk customers
+- recommends the most effective retention strategy
 
-The goal is to move beyond prediction and support better business decision-making.
+## Problem
+Customer churn leads to revenue loss. Businesses need to:
+1. identify at-risk customers
+2. determine which intervention works best
+
+## Approach
+1. Churn prediction using Random Forest
+2. Feature engineering to improve signal
+3. A/B testing to compare strategies
+4. Decision system to combine both
+
+## Results
+- Churn model ROC-AUC: ~0.78+
+- Recall improved significantly through model tuning
+- Strategy A showed higher conversion with statistical significance
+
+## Business Value
+- Enables targeted retention
+- Improves decision-making
+- Reduces unnecessary intervention cost
 
 ## Project Structure
-- `data/` - raw, interim, and processed datasets
-- `notebooks/` - exploratory and modeling notebooks
-- `src/` - reusable Python modules
-- `reports/` - figures and project outputs
-- `app/` - optional deployment/demo app
-- `tests/` - test files
+- notebooks/ → analysis
+- src/ → reusable code
+- models/ → trained model
+- data/ → datasets
 
-## Tools
-- Python
-- VS Code
-- scikit-learn
-- statsmodels
-- XGBoost
-- Azure Machine Learning
+## How to Run
+1. Install requirements
+2. Run notebooks in order (01 → 07)
+3. Use prediction module in src/
 
-## Status
-Project setup in progress.
+## Key Insight
+This project moves beyond prediction to decision-making by combining machine learning with experimentation.
+
+## Limitation
+A/B dataset uses conversion as a proxy for engagement rather than direct churn outcomes.

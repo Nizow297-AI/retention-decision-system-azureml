@@ -1,8 +1,6 @@
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
 
 # Virtual environments
 .venv/
@@ -15,24 +13,15 @@ env/
 # VS Code
 .vscode/
 
-# Data files
+# Raw data only (keep processed data)
 data/raw/
-data/interim/
-data/processed/
-
-# Reports and figures
-reports/figures/
-reports/final_report/
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# Environment / secrets
+# Environment variables
 .env
 
-# ML artifacts
+# ML experiment tracking (optional)
 mlruns/
-*.pkl
-*.joblib
-*.onnx
