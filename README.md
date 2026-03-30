@@ -67,5 +67,19 @@ This project moves beyond prediction by combining machine learning with experime
 ## Limitations
 The A/B dataset is not directly linked to churn. Conversion is used as a proxy for engagement, which is assumed to influence retention behavior.
 
+## Model Monitoring & Retraining
+
+Over time, model performance may degrade due to changes in customer behavior (data drift and concept drift).
+
+To maintain performance:
+
+- Monitor key metrics such as ROC-AUC, precision, and recall
+- Track changes in input feature distributions
+- Monitor prediction distributions (e.g., proportion of high-risk customers)
+
+When performance degrades, retrain the model using updated data.
+
+A champion-challenger approach can be used to compare new models before deployment.
+
 ## Author
 Niren Pillay
